@@ -3,7 +3,7 @@
 #HOW TO RUN THIS:
 1. Download this file first.
 2. Install docker (https://docs.docker.com/engine/install/)
-3. Install wsl (wsl --install), After installing it will reboot
+3. Install wsl ```wsl --install```, After installing it will reboot. Try to do step 1 and 2 at once or it will reboot amny times.
 4. Now start the ```Docker``` application and Run this command ```docker-compose build```
 5. After build is done run ```docker-compose up```
 6. Now open another terminal or powershell and type ```docker ps``` and get the ```CONTAINER ID```
