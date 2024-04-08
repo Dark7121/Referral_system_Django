@@ -4,7 +4,7 @@
 1. Download this file first.
 2. Install docker (https://docs.docker.com/engine/install/)
 3. Install wsl (wsl --install), After installing it will reboot
-4. Run this command ```docker-compose build```
+4. Now start the ```Docker``` application and Run this command ```docker-compose build```
 5. After build is done run ```docker-compose up```
 6. Now open another terminal or powershell and type ```docker ps``` and get the ```CONTAINER ID```
 7. Now in that same terminal type ```docker exec -it <CONTAINER ID> bash``` and run ```python manage.py makemigrations app``` & ```python manage.py migrate```.
