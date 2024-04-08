@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Referral_API Detailed Explanations
 
 
@@ -158,4 +157,4 @@ This is achieved through the configurations in ```docker-compose.yml``` and the 
 The Docker Compose file defines the services and their interactions, ensuring that necessary services like the database are started before the web service.
 
 
---------------------------------------------------------------------XXX---------------------------------------------------------------
+----------------------------------------------------------------XXX-------------------------------------------------------------
