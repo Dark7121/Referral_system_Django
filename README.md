@@ -1,5 +1,22 @@
 # Referral_API Detailed Explanations
 
+#HOW TO RUN THIS:
+1. Download this file first.
+2. Install docker (https://docs.docker.com/engine/install/)
+3. Install wsl (wsl --install), After installing it will reboot
+4. Run this command ```docker-compose build```
+5. After build is done run ```docker-compose up```
+6. Now open another terminal or powershell and type ```docker ps``` and get the ```CONTAINER ID```
+7. Now in that same terminal type ```docker exec -it <CONTAINER ID> bash``` and run ```python manage.py makemigrations app``` & ```python manage.py migrate```.
+#NOW THE SERVER WILL RUN ON YOUR LOCALHOST
+
+#FOLLOW THIS TO CREATE A USER, LOGIN, GET USER DETAILS & REFERRELS DETAILS
+1. ```curl -X POST http://127.0.0.1:8000/register/ -H "Content-Type: application/json" -d "{\"name\": \"John Doe\", \"email\": \"johndow@example.com\", \"password\": \"example@123\"}"``` <--Register User. You Can Also Add Another Field ```referral_id``` For The New Users, And In This Optional Field You Can Enter An Existing User's referral_code.
+2. ```curl -X POST http://127.0.0.1:8000/login/ -H "Content-Type: application/json" -d "{\"email\": \"johndow@example.com\", \"password\": \"example@123\"}"``` <--Login User.
+
+#AFTER CREATING AND LOGGING IN YOU WILL GET THE TOKEN WHICH WILL VALID FOR 3 MINTUES, NOW:
+1. ```http://127.0.0.1:8000/<your-user_id>/<your-token>/``` <--For User Details.
+2. ```http://127.0.0.1:8000/<your-user_id>/<your-token>/``` <--User Details For Those Who Used The Current User's referral_code.
 
 In this Django project, I have built an API that typically responds to some specific calls. But first, let's see the features:
 
